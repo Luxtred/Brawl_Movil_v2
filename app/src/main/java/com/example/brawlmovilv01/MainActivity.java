@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements fragment_menuLate
     private void setupInactivityHandler() {
         inactivityHandler = new Handler(Looper.getMainLooper());
         inactivityRunnable = () -> {
-            Log.d("MainActivity", "Cerrando por inactividad");
             finish();
         };
     }
