@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="6dp"
+    app:cardBackgroundColor="@color/build_item_blue"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_brawler_pin"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_delete"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:padding="6dp"
+                android:src="@drawable/no"
+                android:layout_marginBottom="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <ImageView
+                android:id="@+id/btn_edit"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:padding="6dp"
+                android:src="@drawable/actu"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_icons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintStart_toEndOf="@id/iv_brawler_pin"
+            app:layout_constraintEnd_toStartOf="@id/layout_buttons"
+            app:layout_constraintTop_toTopOf="@id/iv_brawler_pin"
+            app:layout_constraintBottom_toBottomOf="@id/iv_brawler_pin">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"> <ImageView android:id="@+id/iv_build_gadget"
+                android:layout_width="65dp" android:layout_height="65dp"
+                android:layout_marginEnd="4dp" android:src="@drawable/placeholder" />
+
+                <ImageView android:id="@+id/iv_build_gear1"
+                    android:layout_width="60dp" android:layout_height="60dp"
+                    android:layout_marginEnd="4dp" android:src="@drawable/placeholder" />
+
+                <ImageView android:id="@+id/iv_build_starpower"
+                    android:layout_width="65dp" android:layout_height="65dp"
+                    android:layout_marginEnd="4dp" android:src="@drawable/placeholder" />
+
+                <ImageView android:id="@+id/iv_build_gear2"
+                    android:layout_width="60dp" android:layout_height="60dp"
+                    android:layout_marginEnd="4dp" android:src="@drawable/placeholder" />
+
+                <ImageView android:id="@+id/iv_build_hyper"
+                    android:layout_width="65dp" android:layout_height="65dp"
+                    android:src="@drawable/placeholder" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_build_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="AUTOR: IA"
+            android:fontFamily="@font/lilitaone_regular"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/layout_buttons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

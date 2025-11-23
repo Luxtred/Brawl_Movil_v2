@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="card_blue_bg">#A6E3E9</color>
+    <color name="card_purple_bg">#E0BBE4</color>
+    <color name="colorPrimaryNav">#AEB4FD</color>
+    <color name="nav_button_bg">#BCCFFF</color>
+    <color name="nav_button_text">#000000</color>
+    <color name="bg_map_laber">#282828</color>
+
+    <color name="login_background">#F7F7FF</color>
+    <color name="login_edittext_bg">#EDEDED</color>
+    <color name="login_edittext_hint">#AAAAAA</color>
+    <color name="login_button_primary">#8A7BFF</color>
+    <color name="login_button_secondary">#7366C1</color>
+
+    <color name="build_header_green">#CFFFBD</color>
+    <color name="build_item_blue">#BDDFFF</color>
+    <color name="text_stroke">#404040</color>
+</resources>

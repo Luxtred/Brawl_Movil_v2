@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.BrawlMovilV01" parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimaryNav</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryNav</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimaryNav</item>
+
+        <item name="android:fontFamily">@font/lilitaone_regular</item>
+    </style>
+
+    <style name="Theme.BrawlMovilV01" parent="Base.Theme.BrawlMovilV01" />
+</resources>
