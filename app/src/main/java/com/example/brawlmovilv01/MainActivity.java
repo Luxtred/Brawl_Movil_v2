@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements fragment_menuLate
 
     private Handler inactivityHandler;
     private Runnable inactivityRunnable;
-    private static final long INACTIVITY_TIMEOUT_MS = 5 * 60 * 1000; // 5 Minutos
+    private static final long INACTIVITY_TIMEOUT_MS = 5 * 60 * 1000;
 
     private SessionManager sessionManager;
 
@@ -82,13 +82,11 @@ public class MainActivity extends AppCompatActivity implements fragment_menuLate
     }
 
     private void setupListeners() {
-        // Navegación Inferior (Bottom Bar simulada)
         btnBrawlers.setOnClickListener(v -> loadFragment(new fragment_brawlers()));
         btnMapas.setOnClickListener(v -> loadFragment(new fragment_mapas()));
         btnModos.setOnClickListener(v -> loadFragment(new fragment_modos()));
         ivHome.setOnClickListener(v -> loadFragment(new InicioFragment()));
 
-        // Perfil / Login
         ivProfile.setOnClickListener(v -> {
             if (sessionManager.isLoggedIn()) {
                 fragment_menuLateral menuDialog = new fragment_menuLateral();
@@ -99,14 +97,11 @@ public class MainActivity extends AppCompatActivity implements fragment_menuLate
         });
     }
 
-    // --- Implementación del Menú Lateral ---
     @Override
     public void onBuildsClicked() {
-        // Abrimos fragment_build pasando 0 para indicar "Todas mis builds"
         loadFragment(fragment_build.newInstance(0));
     }
 
-    // --- Ciclo de Vida para Inactividad ---
     @Override
     protected void onStart() {
         super.onStart();
@@ -119,12 +114,11 @@ public class MainActivity extends AppCompatActivity implements fragment_menuLate
         inactivityHandler.postDelayed(inactivityRunnable, INACTIVITY_TIMEOUT_MS);
     }
 
-    // --- Helpers ---
     private void loadFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.main_content_container, fragment);
-        transaction.addToBackStack(null); // Permite volver atrás con el botón del cel
+        transaction.addToBackStack(null);
         transaction.commit();
     }
 
