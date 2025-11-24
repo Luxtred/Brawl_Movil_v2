@@ -38,7 +38,7 @@ public class fragment_menuLateral extends DialogFragment {
         try {
             listener = (MenuLateralListener) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(context.toString() + " debe implementar MenuLateralListener");
+            throw new ClassCastException(context.toString() + "Error");
         }
     }
 

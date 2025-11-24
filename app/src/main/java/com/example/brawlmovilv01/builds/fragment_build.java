@@ -66,7 +66,6 @@ public class fragment_build extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         sessionManager = new SessionManager(requireContext());
-        // CORRECCIÓN: Uso del nuevo ApiClient seguro
         apiService = ApiClient.getClient(requireContext()).create(ApiService.class);
 
         initViews(view);
@@ -101,7 +100,6 @@ public class fragment_build extends Fragment {
         CardView btnCrearBuild = view.findViewById(R.id.card_create_build);
         btnCrearBuild.setOnClickListener(v -> {
             if (brawlerId != 0) {
-                // Modo Crear Nuevo (sin ID de build)
                 fragment_build_create createFragment = fragment_build_create.newInstance(brawlerId);
                 navigateToFragment(createFragment);
             } else {

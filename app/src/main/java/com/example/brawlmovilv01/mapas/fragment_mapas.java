@@ -100,8 +100,8 @@ public class fragment_mapas extends Fragment implements MapaAdapter.OnMapaClickL
         args.putString("MAPA_NOMBRE", mapa.getNombre());
         args.putString("MAPA_IMAGEN", mapa.getImagenUrlMap());
         args.putInt("MODO_ID_RELACIONADO", mapa.getIdMode());
-        args.putString("MODO_ICONO", ""); // Valor por defecto
-        args.putString("MODO_COLOR", "#808080"); // Gris por defecto
+        args.putString("MODO_ICONO", "");
+        args.putString("MODO_COLOR", "#808080");
 
         detalleFragment.setArguments(args);
 
